@@ -10,7 +10,7 @@ Group:		Games/Boards
 URL:		http://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
 Source0:	ftp://ftp.cs.kent.ac.uk/pub/djb/Extract/pgn-extract-%{tarballversion}.tgz
 # (Abel) 15.0-1mdk use mandriva optimization flags
-Patch0:		pgn-extract-15.0-makefile.patch
+Patch0:		pgn-extract-16.2-makefile.patch
 # (Abel) 15.0-1mdk treat '--help' option as '-h'
 Patch1:		pgn-extract-15.0-help-option.patch
 # (Abel) 15.0-1mdk neater help message
@@ -35,15 +35,13 @@ customised version provided by the user.
 
 %prep
 %setup -q -n %{name}-%{tarballversion}
-#%patch0 -p1 -b .mdk
-#%patch1 -p1 -b .helpopt
-#%patch2 -p1 -b .helpmsg
-#%patch3 -p1 -b .checkmate
-
-#find -type f -print0 | xargs -0 -r chmod 0644
+%patch0 -p1 -b .mdk
+%patch1 -p1 -b .helpopt
+%patch2 -p1 -b .helpmsg
+%patch3 -p1 -b .checkmate
 
 %build
-%make
+%make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf %{buildroot}
