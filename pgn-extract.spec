@@ -17,7 +17,6 @@ Patch1:		pgn-extract-15.0-help-option.patch
 Patch2:		pgn-extract-15.0-help-mesg.patch
 # (Abel) 15.0-1mdk allow checkmate symbol '#'
 Patch3:		pgn-extract-15.0-allow-checkmate.patch
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Its purpose is for manipulating chess games written in the Portable
