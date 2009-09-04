@@ -4,7 +4,7 @@
 Summary:	Portable Game Notation (PGN) Manipulator for Chess Games
 Name:		pgn-extract
 Version:	%{version}
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		Games/Boards
 URL:		http://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
