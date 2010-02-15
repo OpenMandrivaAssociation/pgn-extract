@@ -9,8 +9,6 @@ License:	GPLv2
 Group:		Games/Boards
 URL:		http://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
 Source0:	ftp://ftp.cs.kent.ac.uk/pub/djb/Extract/pgn-extract-%{tarballversion}.tgz
-# (Abel) 15.0-1mdk use mandriva optimization flags
-Patch0:		pgn-extract-16.2-makefile.patch
 # (Abel) 15.0-1mdk neater help message
 Patch1:		pgn-extract-15.0-help-mesg.patch
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -31,7 +29,6 @@ customised version provided by the user.
 
 %prep
 %setup -q -n %{name}-%{tarballversion}
-%patch0 -p1 -b .mdk
 %patch1 -p1 -b .helpmsg
 
 %build
