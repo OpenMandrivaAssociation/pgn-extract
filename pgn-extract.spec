@@ -1,22 +1,18 @@
-%define	version	16.2
+%define	version	16.7
 %define tarballversion %(echo %version|sed -e 's|\\.|-|') 
 
 Summary:	Portable Game Notation (PGN) Manipulator for Chess Games
 Name:		pgn-extract
 Version:	%{version}
-Release:	%mkrel 5
-License:	GPL
+Release:	%mkrel 1
+License:	GPLv2
 Group:		Games/Boards
 URL:		http://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
 Source0:	ftp://ftp.cs.kent.ac.uk/pub/djb/Extract/pgn-extract-%{tarballversion}.tgz
 # (Abel) 15.0-1mdk use mandriva optimization flags
 Patch0:		pgn-extract-16.2-makefile.patch
-# (Abel) 15.0-1mdk treat '--help' option as '-h'
-Patch1:		pgn-extract-15.0-help-option.patch
 # (Abel) 15.0-1mdk neater help message
-Patch2:		pgn-extract-15.0-help-mesg.patch
-# (Abel) 15.0-1mdk allow checkmate symbol '#'
-Patch3:		pgn-extract-15.0-allow-checkmate.patch
+Patch1:		pgn-extract-15.0-help-mesg.patch
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -36,9 +32,7 @@ customised version provided by the user.
 %prep
 %setup -q -n %{name}-%{tarballversion}
 %patch0 -p1 -b .mdk
-%patch1 -p1 -b .helpopt
-%patch2 -p1 -b .helpmsg
-%patch3 -p1 -b .checkmate
+%patch1 -p1 -b .helpmsg
 
 %build
 %make OPTIMIZE="$RPM_OPT_FLAGS"
@@ -52,5 +46,5 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README help.html eco.pgn
+%doc help.html eco.pgn
 %{_gamesbindir}/*
