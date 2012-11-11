@@ -1,0 +1,51 @@
+--- pgn-extract-15.0/argsfile.c.helpmsg	2001-09-14 16:36:03.000000000 +0800
++++ pgn-extract-15.0/argsfile.c	2005-07-03 17:08:14.000000000 +0800
+@@ -76,22 +76,23 @@ static void
+ usage_and_exit(unsigned level)
+ { const char **help_data;
+   const char *level_0_help[] = {
+-      "-aoutputfile -- append extracted games to outputfile. (See -o).",
+-      "-Aargsfile -- read the program's arguments from argsfile.",
+-      "-dduplicates -- write duplicate games to the file duplicates.",
+-      "-D -- don't output duplicate games.",
+-      "-ffile_list  -- file_list contains the list of PGN source files, one per line.",
+-      "-h1 -- print details of further arguments.",
+-      "-llogfile  -- Save the diagnostics in logfile rather than using stderr.",
+-      "-ooutputfile -- write extracted games to outputfile (existing contents lost).",
+-      "-r -- report any errors but don't extract.",
+-      "-s -- silent mode: don't report each game as it is extracted.",
+-      "-ttagfile -- file of tag extraction criteria.",
+-      "-Tcriterion -- player, date, or result extraction criterion.",
+-      "-U -- don't output games that only occur once. (See -d).",
+-      "-vvariations -- the file variations contains the textual lines of interest.",
+-      "-xvariations -- the file variations contains the lines resulting in",
+-      "                positions of interest.",
++      "-aoutputfile   append extracted games to outputfile. (See -o).",
++      "-Aargsfile     read the program's arguments from argsfile.",
++      "-dduplicates   write duplicate games to the file duplicates.",
++      "-D             don't output duplicate games.",
++      "-ffile_list    file_list contains the list of PGN source files, one per line.",
++      "-h/--help      this help message.",
++      "-h1            print details of further arguments.",
++      "-llogfile      Save the diagnostics in logfile rather than using stderr.",
++      "-ooutputfile   write extracted games to outputfile (existing contents lost).",
++      "-r             report any errors but don't extract.",
++      "-s             silent mode: don't report each game as it is extracted.",
++      "-ttagfile      file of tag extraction criteria.",
++      "-Tcriterion    player, date, or result extraction criterion.",
++      "-U             don't output games that only occur once. (See -d).",
++      "-vvariations   the file variations contains the textual lines of interest.",
++      "-xvariations   the file variations contains the lines resulting in",
++      "               positions of interest.",
+       /* Must be NULL terminated. */
+       (char *)NULL,
+   };
+@@ -158,7 +159,7 @@ usage_and_exit(unsigned level)
+   fprintf(GlobalState.logfile,"%s\n\n",URL);
+   fprintf(GlobalState.logfile,"Usage: pgn-extract [arguments] [file.pgn ...]\n");
+   fprintf(GlobalState.logfile,"Partial list of arguments ");
+-  fprintf(GlobalState.logfile,"(see -%c for more):\n",HELP_ARGUMENT);
++  fprintf(GlobalState.logfile,"(see -%c1 for more):\n",HELP_ARGUMENT);
+   
+   for(; *help_data != NULL; help_data++){
+       fprintf(GlobalState.logfile,"%s\n",*help_data);
