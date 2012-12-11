@@ -45,3 +45,51 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc help.html eco.pgn
 %{_gamesbindir}/*
+
+
+%changelog
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 16.7-2mdv2011.0
++ Revision: 614535
+- the mass rebuild of 2010.1 packages
+
+* Mon Feb 15 2010 Sandro Cazzaniga <kharec@mandriva.org> 16.7-1mdv2010.1
++ Revision: 506100
+- correct patch
+- Update to 16.7
+- del old patches
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 16.2-5mdv2010.0
++ Revision: 430683
+- rebuild
+
+* Fri Aug 01 2008 Thierry Vignaud <tv@mandriva.org> 16.2-4mdv2009.0
++ Revision: 258932
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 16.2-3mdv2009.0
++ Revision: 246852
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 16.2-1mdv2008.1
++ Revision: 136373
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Jul 06 2007 Funda Wang <fwang@mandriva.org> 16.2-1mdv2008.0
++ Revision: 49102
+- Rediff patch0
+- New version
+- Import pgn-extract
+
+
+
+* Thu Aug 24 2006 Nicolas Lécureuil <neoclust@mandriva.org> 15.0-1mdv2007.0
+- Fix Group
+
+* Mon Aug 22 2005 Abel Cheung <deaddog@mandriva.org> 15.0-2mdk
+- Patch3: Allow checkmate symbol '#' to exist in pgn file
+
+* Sun Jul 03 2005 Abel Cheung <deaddog@mandriva.org> 15.0-1mdk
+- First Mandriva package
