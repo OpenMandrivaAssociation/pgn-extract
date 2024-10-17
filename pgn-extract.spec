@@ -7,7 +7,7 @@ Version:	%{version}
 Release:	3
 License:	GPLv2
 Group:		Games/Boards
-URL:		http://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
+URL:		https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
 Source0:	ftp://ftp.cs.kent.ac.uk/pub/djb/Extract/pgn-extract-%{tarballversion}.tgz
 # (Abel) 15.0-1mdk neater help message
 Patch1:		pgn-extract-15.0-help-mesg.patch
