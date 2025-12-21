@@ -13,6 +13,7 @@ Source0:	ftp://ftp.cs.kent.ac.uk/pub/djb/Extract/pgn-extract-%{tarballversion}.t
 Patch1:		pgn-extract-15.0-help-mesg.patch
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	make
 %description
 Its purpose is for manipulating chess games written in the Portable
 Game Notation (PGN).
